@@ -11,4 +11,4 @@ GUI version.
 The screenshot below shows a python file on the left and a vim file on the
 right.
 
-![heraldish_screenshot](C:\OD\Users\Pedro\local-git-repos\heraldish\heraldish.png)
+![heraldish_screenshot](https://cloud.githubusercontent.com/assets/2583971/3099852/97496636-e607-11e3-9aff-8c9567a45f1f.png)
