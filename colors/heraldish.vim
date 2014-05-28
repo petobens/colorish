@@ -255,6 +255,23 @@ hi def link diffChanged GitGutterChange
 hi def link diffLine DiffAdd
 
 " }}}
+" Markdown {{{
+
+call s:HL('markdownHeadingDelimiter', 'mediumgravel', '', 'bold')
+call s:HL('markdownH1', 'darkpink', '', 'bold')
+call s:HL('markdownH2', 'green', '', 'bold')
+call s:HL('markdownH3', 'green', '', 'none')
+
+call s:HL('markdownLinkText', 'pinkpurple', '', 'underline')
+call s:HL('markdownLinkTextDelimiter', 'lightgravel', '', '')
+call s:HL('markdownUrl', 'lightblue', '', '')
+call s:HL('markdownLinkDelimiter', 'lightgravel', '', '')
+
+call s:HL('markdownCodeDelimiter', 'lightyellow', '', 'bold')
+call s:HL('markdownCode', 'lightyellow', '', 'none')
+call s:HL('markdownCodeBlock', 'lightyellow', '', 'none')
+
+" }}}
 " Snippets {{{
 
 hi def link snipTODO Todo
