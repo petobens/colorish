@@ -260,7 +260,7 @@ hi def link diffLine DiffAdd
 call s:HL('markdownHeadingDelimiter', 'darkpink', '', 'bold')
 call s:HL('markdownH1', 'darkpink', '', 'bold')
 call s:HL('markdownH2', 'darkpink', '', 'bold')
-call s:HL('markdownH3', 'darkpink', '', 'none')
+call s:HL('markdownH3', 'darkpink', '', 'bold')
 
 call s:HL('markdownLinkText', 'pinkpurple', '', 'underline')
 call s:HL('markdownLinkTextDelimiter', 'lightgravel', '', '')
