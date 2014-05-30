@@ -2,7 +2,7 @@
 "          File: heraldish.vim
 "        Author: Pedro Ferrari
 "       Created: 13 ago 2013
-" Last Modified: 28 May 2014
+" Last Modified: 30 May 2014
 "   Description: Heraldish colorscheme
 "===============================================================================
 " The way to structure the colorscheme is based (copied) on Steve Losh's Bad
@@ -257,10 +257,10 @@ hi def link diffLine DiffAdd
 " }}}
 " Markdown {{{
 
-call s:HL('markdownHeadingDelimiter', 'mediumgravel', '', 'bold')
+call s:HL('markdownHeadingDelimiter', 'darkpink', '', 'bold')
 call s:HL('markdownH1', 'darkpink', '', 'bold')
-call s:HL('markdownH2', 'green', '', 'bold')
-call s:HL('markdownH3', 'green', '', 'none')
+call s:HL('markdownH2', 'darkpink', '', 'bold')
+call s:HL('markdownH3', 'darkpink', '', 'none')
 
 call s:HL('markdownLinkText', 'pinkpurple', '', 'underline')
 call s:HL('markdownLinkTextDelimiter', 'lightgravel', '', '')
