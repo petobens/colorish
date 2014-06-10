@@ -2,7 +2,7 @@
 "          File: heraldish.vim
 "        Author: Pedro Ferrari
 "       Created: 13 ago 2013
-" Last Modified: 30 May 2014
+" Last Modified: 09 Jun 2014
 "   Description: Heraldish colorscheme
 "===============================================================================
 " The way to structure the colorscheme is based (copied) on Steve Losh's Bad
@@ -341,7 +341,7 @@ call s:HL('vimfilerNonMark',    'lightyellow')
 call s:HL('vimfilerMarkedFile', 'tardis',      '', 'none')
 call s:HL('vimfilerDirectory',  'lightyellow', '', 'none')
 
-call s:HL('vimfilerOpendFile',  'lightblue',   '',   'none')
+call s:HL('vimfilerOpenedFile',  'lightblue',   '',   'none')
 call s:HL('vimfilerClosedFile', 'lightyellow', '',   'none')
 call s:HL('vimfilerROFile',     'mediumred',   'bg', 'bold')
 
