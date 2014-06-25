@@ -1,8 +1,8 @@
 "===============================================================================
 "          File: heraldish.vim
 "        Author: Pedro Ferrari
-"       Created: 13 ago 2013
-" Last Modified: 09 Jun 2014
+"       Created: 13 Aug 2013
+" Last Modified: 25 Jun 2014
 "   Description: Heraldish colorscheme
 "===============================================================================
 " The way to structure the colorscheme is based (copied) on Steve Losh's Bad
@@ -42,7 +42,7 @@ let s:hdc.darkgravel   = ['242321', 235]
 let s:hdc.blackgravel  = ['1c1b1a', 233]
 let s:hdc.tardis       = ['0a9dff', 39]
 
-" From Herald
+" From herald
 let s:hdc.lightyellow  = ['ffee68', 227]
 let s:hdc.orange       = ['ffb539', 214]
 let s:hdc.darkorange   = ['ffa500', 214]
@@ -54,7 +54,7 @@ let s:hdc.lightestblue = ['70bdf1', 117]
 let s:hdc.lightblue    = ['90cbf1', 75]
 let s:hdc.green        = ['6df584', 84]
 
-" From powerline
+" From Powerline
 let s:hdc.darkgray     = ['303030', 236]
 
 " }}}
