@@ -2,7 +2,7 @@
 "          File: heraldish.vim
 "        Author: Pedro Ferrari
 "       Created: 13 Aug 2013
-" Last Modified: 25 Jun 2014
+" Last Modified: 15 Jul 2014
 "   Description: Heraldish colorscheme
 "===============================================================================
 " The way to structure the colorscheme is based (copied) on Steve Losh's Bad
@@ -314,15 +314,6 @@ call s:HL('InterestingWord6', 'coal', 'snow')
 
 
 " }}}
-" Latex-Box {{{
-
-" Table of contents
-call s:HL('secNum',          'plain', 'bg', 'none')
-call s:HL('mainSecLine', 'lightblue', 'bg', 'bold')
-call s:HL('SecLine',   'lightyellow', 'bg', 'none')
-call s:HL('ssubSecLine',     'plain', 'bg', 'none')
-
-" }}}
 " Sneak {{{
 
 call s:HL('SneakPluginTarget','coal', 'lightyellow', 'bold')
@@ -344,6 +335,15 @@ call s:HL('vimfilerDirectory',  'lightyellow', '', 'none')
 call s:HL('vimfilerOpenedFile',  'lightblue',   '',   'none')
 call s:HL('vimfilerClosedFile', 'lightyellow', '',   'none')
 call s:HL('vimfilerROFile',     'mediumred',   'bg', 'bold')
+
+" }}}
+" Vim-latex {{{
+
+" Table of contents
+call s:HL('secNum',          'plain', 'bg', 'none')
+call s:HL('mainSecLine', 'lightblue', 'bg', 'bold')
+call s:HL('SecLine',   'lightyellow', 'bg', 'none')
+call s:HL('ssubSecLine',     'plain', 'bg', 'none')
 
 " }}}
 
