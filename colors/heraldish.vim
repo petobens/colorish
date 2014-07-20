@@ -2,7 +2,7 @@
 "          File: heraldish.vim
 "        Author: Pedro Ferrari
 "       Created: 13 Aug 2013
-" Last Modified: 18 Jul 2014
+" Last Modified: 20 Jul 2014
 "   Description: Heraldish colorscheme
 "===============================================================================
 " The way to structure the colorscheme is based (copied) on Steve Losh's Bad
@@ -341,11 +341,10 @@ call s:HL('vimfilerROFile',     'mediumred',   'bg', 'bold')
 
 " Table of contents
 call s:HL('TocNum', 'plain', 'bg', 'none')
-call s:HL('TocSec', 'darkpink', 'bg', 'none')
-call s:HL('TocSec1', 'lightblue', 'bg', 'bold')
-call s:HL('TocSec2', 'lightyellow', 'bg', 'none')
+call s:HL('TocSec0', 'lightblue', 'bg', 'bold')
+call s:HL('TocSec1', 'lightyellow', 'bg', 'none')
+call s:HL('TocSec2', 'plain', 'bg', 'none')
 call s:HL('TocSec3', 'plain', 'bg', 'none')
-call s:HL('TocSec4', 'plain', 'bg', 'none')
 
 " }}}
 
