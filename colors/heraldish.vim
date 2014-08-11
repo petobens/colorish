@@ -2,7 +2,7 @@
 "          File: heraldish.vim
 "        Author: Pedro Ferrari
 "       Created: 13 Aug 2013
-" Last Modified: 20 Jul 2014
+" Last Modified: 10 Aug 2014
 "   Description: Heraldish colorscheme
 "===============================================================================
 " The way to structure the colorscheme is based (copied) on Steve Losh's Bad
@@ -347,5 +347,10 @@ call s:HL('TocSec2', 'plain', 'bg', 'none')
 call s:HL('TocSec3', 'plain', 'bg', 'none')
 
 " }}}
+" Vimshell {{{
 
+hi def link PyIntPrompt Identifier
+hi def link PyIntError Error
+
+" }}}
 " }}}
