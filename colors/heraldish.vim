@@ -2,7 +2,7 @@
 "          File: heraldish.vim
 "        Author: Pedro Ferrari
 "       Created: 13 Aug 2013
-" Last Modified: 10 Aug 2014
+" Last Modified: 12 Aug 2014
 "   Description: Heraldish colorscheme
 "===============================================================================
 " The way to structure the colorscheme is based (copied) on Steve Losh's Bad
@@ -320,6 +320,11 @@ call s:HL('SneakPluginTarget','coal', 'lightyellow', 'bold')
 call s:HL('SneakStreakMask','coal', 'coal')
 call s:HL('SneakStreakTarget','darkorange', 'coal')
 
+
+" }}}
+" Unite {{{
+
+call s:HL('UniteQuickFixWarning', 'darkorange', '', 'none')
 
 " }}}
 " Vimfiler {{{
