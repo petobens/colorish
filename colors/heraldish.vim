@@ -58,7 +58,7 @@ let s:hdc.green        = ['6df584', 84]
 let s:hdc.darkgray     = ['303030', 236]
 
 " }}}
-" Highlighting Function {{{
+" Highlighting functions {{{
 
 function! s:HL(group, fg, ...)
     " Arguments: group, guifg, guibg, gui, guisp
@@ -317,7 +317,6 @@ function! s:calendar_color()
     hi! link CalendarSundayTitle CalendarDayTitle
 endfunction
 
-
 " }}}
 " Gitgutter {{{
 
@@ -345,14 +344,12 @@ call s:HL('InterestingWord4', 'coal', 'orange')
 call s:HL('InterestingWord5', 'coal', 'lightblue')
 call s:HL('InterestingWord6', 'coal', 'snow')
 
-
 " }}}
 " Sneak {{{
 
 call s:HL('SneakPluginTarget','coal', 'lightyellow', 'bold')
 call s:HL('SneakStreakMask','coal', 'coal')
 call s:HL('SneakStreakTarget','darkorange', 'coal')
-
 
 " }}}
 " Unite {{{
