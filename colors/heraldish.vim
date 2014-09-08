@@ -294,6 +294,30 @@ hi def link txtURl Identifier
 " }}}
 " Plugins {{{
 
+" Calendar {{{
+
+augroup ps_calendar_color
+    au!
+    au FileType calendar call s:calendar_color()
+augroup END
+
+function! s:calendar_color()
+    if exists(':Calendar')
+        call calendar#color#syntax('Saturday', s:GetColor('green'),
+                    \ s:GetColor('blackgravel'), '')
+        call calendar#color#syntax('TodaySaturday', s:GetColor('green'),
+                    \ s:GetColor('blackgravel'), '')
+        call calendar#color#syntax('Sunday', s:GetColor('darkpink'),
+                    \ s:GetColor('blackgravel'), '')
+        call calendar#color#syntax('TodaySunday', s:GetColor('darkpink'),
+                    \ s:GetColor('blackgravel'), '')
+    endif
+    hi! link CalendarSaturdayTitle CalendarDayTitle
+    hi! link CalendarSundayTitle CalendarDayTitle
+endfunction
+
+
+" }}}
 " Gitgutter {{{
 
 call s:HL('GitGutterAdd',                'green', 'blackgravel')
