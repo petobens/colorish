@@ -103,6 +103,7 @@ function! s:GetColor(color_name)
     end
     return color
 endfunction
+
 " }}}
 
 " Actual colorscheme -----------------------------------------------------------
