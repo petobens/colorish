@@ -2,7 +2,7 @@
 "          File: heraldish.vim
 "        Author: Pedro Ferrari
 "       Created: 13 Aug 2013
-" Last Modified: 12 Aug 2014
+" Last Modified: 08 Sep 2014
 "   Description: Heraldish colorscheme
 "===============================================================================
 " The way to structure the colorscheme is based (copied) on Steve Losh's Bad
@@ -95,6 +95,14 @@ function! s:HL(group, fg, ...)
     execute histring
 endfunction
 
+function! s:GetColor(color_name)
+    let base_color = get(s:hdc, a:color_name)
+    let color = base_color[1]
+    if has("gui_running")
+        let color = '#' . base_color[0]
+    end
+    return color
+endfunction
 " }}}
 
 " Actual colorscheme -----------------------------------------------------------
