@@ -328,8 +328,8 @@ call s:HL('GitGutterDelete',         'mediumred', 'blackgravel')
 " }}}
 " IndentLine {{{
 
-let g:indentLine_color_gui = '#' . get(s:hdc, 'mediumgravel')[0]
-let g:indentLine_color_term = get(s:hdc, 'mediumgravel')[1]
+let g:indentLine_color_gui = s:GetColor('mediumgravel')
+let g:indentLine_color_term = s:GetColor('mediumgravel','c')
 
 " }}}
 " Interesting Words {{{
