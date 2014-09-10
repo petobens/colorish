@@ -115,8 +115,8 @@ endfunction
 call s:HL('Normal', 'plain', 'blackgravel')
 
 " Text
-call s:HL('NonText',    'mediumgravel')
-call s:HL('SpecialKey', 'mediumgravel')
+call s:HL('NonText',    'mediumgravel', '', 'none')
+call s:HL('SpecialKey', 'mediumgravel', '', 'none')
 call s:HL('Directory',  'lightyellow', '',   'none')
 call s:HL('Title',      'green',       '',   'bold')
 call s:HL('Conceal',    'green',       '',   'none')
