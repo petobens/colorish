@@ -2,7 +2,7 @@
 "          File: heraldish.vim
 "        Author: Pedro Ferrari
 "       Created: 13 Aug 2013
-" Last Modified: 09 Sep 2014
+" Last Modified: 10 Sep 2014
 "   Description: Heraldish colorscheme
 "===============================================================================
 " The way to structure the colorscheme is based (copied) on Steve Losh's Bad
@@ -115,8 +115,8 @@ endfunction
 call s:HL('Normal', 'plain', 'blackgravel')
 
 " Text
-call s:HL('NonText',    'darkpink',    'bg', 'none')
-call s:HL('SpecialKey', 'pinkpurple',  'bg', 'none')
+call s:HL('NonText',    'mediumgravel')
+call s:HL('SpecialKey', 'mediumgravel')
 call s:HL('Directory',  'lightyellow', '',   'none')
 call s:HL('Title',      'green',       '',   'bold')
 call s:HL('Conceal',    'green',       '',   'none')
