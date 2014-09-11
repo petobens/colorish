@@ -8,10 +8,10 @@ Wolf](https://github.com/sjl/badwolf) by Steve Losh.
 256-color terminals are also supported but there are some differences with the
 GUI version.
 
-The screenshot below shows a python file on the left and a vim file on the
-right.
+The first screenshot below shows a vim file and the second one a python file.
 
-![heraldish_screenshot](https://cloud.githubusercontent.com/assets/2583971/3100571/373bd246-e61c-11e3-8c2c-dae9a9250bf7.png)
+![heraldish_screenshot_1](https://cloud.githubusercontent.com/assets/2583971/4240990/12e1830a-39f0-11e4-9d50-11103676fd08.png)
+![heraldish_screenshot_2](https://cloud.githubusercontent.com/assets/2583971/4240991/132282e2-39f0-11e4-9808-fdfbb5d8dce7.png)
 
 ## Installation
 
