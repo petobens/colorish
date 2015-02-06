@@ -382,11 +382,4 @@ call s:HL('TocSec2', 'plain', 'bg', 'none')
 call s:HL('TocSec3', 'plain', 'bg', 'none')
 
 " }}}
-" Vimshell {{{
-
-hi def link PyIntIn Statement
-hi def link PyIntOut Identifier
-hi def link PyIntError Error
-
-" }}}
 " }}}
