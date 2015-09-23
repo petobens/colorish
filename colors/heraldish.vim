@@ -2,7 +2,7 @@
 "          File: heraldish.vim
 "        Author: Pedro Ferrari
 "       Created: 13 Aug 2013
-" Last Modified: 20 Aug 2015
+" Last Modified: 23 Sep 2015
 "   Description: Heraldish colorscheme
 "===============================================================================
 " The way to structure the colorscheme is based (copied) on Steve Losh's Bad
@@ -11,17 +11,17 @@
 " Supporting code --------------------------------------------------------------
 " Preamble {{{
 
-if !has("gui_running") && &t_Co != 88 && &t_Co != 256
+if !has('gui_running') && &t_Co != 88 && &t_Co != 256
     finish
 endif
 
 set background=dark
 
-if exists("syntax_on")
+if exists('syntax_on')
     syntax reset
 endif
 
-let colors_name = "heraldish"
+let colors_name = 'heraldish'
 
 " }}}
 " Palette {{{
@@ -66,7 +66,7 @@ function! s:HL(group, fg, ...)
     let histring = 'hi ' . a:group . ' '
 
     if strlen(a:fg)
-        if a:fg == 'fg'
+        if a:fg ==# 'fg'
             let histring .= 'guifg=fg ctermfg=fg '
         else
             let c = get(s:hdc, a:fg)
@@ -75,7 +75,7 @@ function! s:HL(group, fg, ...)
     endif
 
     if a:0 >= 1 && strlen(a:1)
-        if a:1 == 'bg'
+        if a:1 ==# 'bg'
             let histring .= 'guibg=bg ctermbg=bg '
         else
             let c = get(s:hdc, a:1)
@@ -98,7 +98,7 @@ endfunction
 function! s:GetColor(color_name, ...)
     let base_color = get(s:hdc, a:color_name)
     let color = base_color[1]
-    if has("gui_running") && a:0 < 1
+    if has('gui_running') && a:0 < 1
         let color = '#' . base_color[0]
     endif
     return color
@@ -230,8 +230,8 @@ call s:HL('Tag', '', '', 'bold')
 " }}}
 " Spelling {{{
 
-if has("spell")
-    if has("gui_running")
+if has('spell')
+    if has('gui_running')
         call s:HL('SpellCap', '', '', 'undercurl,bold','lightyellow')
         call s:HL('SpellBad',   '', '', 'undercurl', 'mediumred')
         call s:HL('SpellLocal', '', '', 'undercurl', 'lightyellow')
