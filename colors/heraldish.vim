@@ -2,7 +2,7 @@
 "          File: heraldish.vim
 "        Author: Pedro Ferrari
 "       Created: 13 Aug 2013
-" Last Modified: 23 Sep 2015
+" Last Modified: 09 Oct 2015
 "   Description: Heraldish colorscheme
 "===============================================================================
 " The way to structure the colorscheme is based (copied) on Steve Losh's Bad
@@ -356,6 +356,7 @@ call s:HL('SneakStreakTarget','darkorange', 'coal')
 
 call s:HL('UniteQuickFixWarning', 'darkorange', '', 'none')
 hi default link uniteSource__GrepFile Directory
+hi default link uniteSource__NeoBundleInstall_URI Identifier
 
 " }}}
 " Vimfiler {{{
