@@ -21,7 +21,7 @@ if exists('syntax_on')
     syntax reset
 endif
 
-let colors_name = 'heraldish'
+let g:colors_name = 'heraldish'
 
 " }}}
 " Palette {{{
