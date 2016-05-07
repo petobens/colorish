@@ -2,7 +2,7 @@
 "          File: heraldish.vim
 "        Author: Pedro Ferrari
 "       Created: 13 Aug 2013
-" Last Modified: 02 Mar 2016
+" Last Modified: 07 May 2016
 "   Description: Heraldish colorscheme
 "===============================================================================
 " The way to structure the colorscheme is based (copied) on Steve Losh's Bad
@@ -324,12 +324,6 @@ call s:HL('GitGutterAdd',                'green', 'blackgravel')
 call s:HL('GitGutterChange',       'lightyellow', 'blackgravel')
 call s:HL('GitGutterChangeDelete', 'lightyellow', 'blackgravel')
 call s:HL('GitGutterDelete',         'mediumred', 'blackgravel')
-
-" }}}
-" IndentLine {{{
-
-let g:indentLine_color_gui = s:GetColor('mediumgravel')
-let g:indentLine_color_term = s:GetColor('mediumgravel','c')
 
 " }}}
 " Interesting Words {{{
