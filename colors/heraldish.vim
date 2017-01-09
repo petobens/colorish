@@ -2,7 +2,7 @@
 "          File: heraldish.vim
 "        Author: Pedro Ferrari
 "       Created: 13 Aug 2013
-" Last Modified: 07 Dec 2016
+" Last Modified: 09 Jan 2017
 "   Description: Heraldish colorscheme
 "===============================================================================
 " The way to structure the colorscheme is based (copied) on Steve Losh's Bad
@@ -316,6 +316,11 @@ function! s:calendar_color()
     hi! link CalendarSaturdayTitle CalendarDayTitle
     hi! link CalendarSundayTitle CalendarDayTitle
 endfunction
+
+" }}}
+" Denite {{{
+
+hi default link deniteSource_grepFile Directory
 
 " }}}
 " Gitgutter {{{
