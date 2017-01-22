@@ -1,15 +1,15 @@
 "===============================================================================
-"          File: powerline.vim
+"          File: heraldish.vim
 "        Author: Pedro Ferrari
 "       Created: 20 ago 2013
-" Last Modified: 06 Feb 2015
-"   Description: Powerline Airline Theme
+" Last Modified: 22 Jan 2017
+"   Description: heraldish Airline Theme
 "===============================================================================
-let g:airline#themes#powerline#palette = {}
+let g:airline#themes#heraldish#palette = {}
 
 " The first element of the list is the foreground color and the second one the
 " background color
-let g:airline#themes#powerline#palette.normal = {
+let g:airline#themes#heraldish#palette.normal = {
       \ 'airline_a':       ['#005f00', '#afd700',  22, 148, 'bold'],
       \ 'airline_b':       ['#bcbcbc', '#4e4e4e', 250, 239, ''],
       \ 'airline_c':       ['#f8f6f2', '#303030',  15, 236, ''],
@@ -18,32 +18,32 @@ let g:airline#themes#powerline#palette.normal = {
       \ 'airline_z':       ['#303030', '#d0d0d0', 236, 252, ''],
       \ 'airline_warning': ['#141413', '#df5f00', 232, 166, ''],
       \ }
-let g:airline#themes#powerline#palette.normal_paste = {
+let g:airline#themes#heraldish#palette.normal_paste = {
       \ 'airline_a': ['#f8f6f2', '#d70000', 15, 160, 'bold']
       \ }
 
-let g:airline#themes#powerline#palette.insert = {
+let g:airline#themes#heraldish#palette.insert = {
       \ 'airline_a': ['#141413', '#0a9dff', 232, 39, 'bold']
       \ }
 
-let g:airline#themes#powerline#palette.visual = {
+let g:airline#themes#heraldish#palette.visual = {
       \ 'airline_a': ['#870000', '#ff8700', 88, 208, 'bold']
       \ }
 
-let g:airline#themes#powerline#palette.replace = {
+let g:airline#themes#heraldish#palette.replace = {
       \ 'airline_a': ['#f8f6f2', '#d70000', 15, 160, 'bold']
       \ }
 
 let s:IA   = ['#4e4e4e', '#262626', 239, 235, '']
-let g:airline#themes#powerline#palette.inactive =
+let g:airline#themes#heraldish#palette.inactive =
             \ airline#themes#generate_color_map(s:IA, s:IA, s:IA)
 
 " Readonly
-let g:airline#themes#powerline#palette.accents = {
+let g:airline#themes#heraldish#palette.accents = {
     \ 'red': ['#ff5f5f', '#303030', 203, 236]
     \ }
 
-let g:airline#themes#powerline#palette.tabline = {
+let g:airline#themes#heraldish#palette.tabline = {
       \ 'airline_tab':           ['#bcbcbc', '#444444', 250, 238, ''],
       \ 'airline_tabsel':        ['#141413', '#0a9dff', 232,  39, 'bold'],
       \ 'airline_tabfill':       ['#f8f6f2', '#303030',  15, 236, ''],
