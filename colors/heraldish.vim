@@ -191,7 +191,7 @@ call s:HL('Boolean',   'green', '', 'none')
 call s:HL('Number',    'green', '', 'none')
 call s:HL('Float',     'green', '', 'none')
 
-call s:HL('Identifier', 'lightblue',    '', 'none')
+call s:HL('Identifier', 'palepurple',    '', 'none') " Variables
 call s:HL('Function',   'lightestblue', '', 'none')
 
 call s:HL('Statement',   'pinkpurple', '', 'none')
@@ -205,6 +205,7 @@ call s:HL('Delimiter',   'darkpink', '', 'none')
 
 call s:HL('Exception', 'green', '', 'none')
 
+" Preprocessor directives (starting with #)
 call s:HL('PreProc',   'palepurple', '', 'none')
 call s:HL('Macro',     'palepurple', '', 'none')
 call s:HL('Define',    'palepurple', '', 'none')
