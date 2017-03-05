@@ -289,7 +289,7 @@ hi def link snipTODO Todo
 " }}}
 " Text {{{
 
-hi def link txtURl Identifier
+hi def link txtURl Function
 
 " }}}
 
