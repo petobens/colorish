@@ -2,7 +2,7 @@
 "          File: heraldish.vim
 "        Author: Pedro Ferrari
 "       Created: 13 Aug 2013
-" Last Modified: 09 Jan 2017
+" Last Modified: 05 Mar 2017
 "   Description: Heraldish colorscheme
 "===============================================================================
 " The way to structure the colorscheme is based (copied) on Steve Losh's Bad
@@ -295,34 +295,6 @@ hi def link txtURl Identifier
 " }}}
 " Plugins {{{
 
-" Calendar {{{
-
-augroup ps_calendar_color
-    au!
-    au FileType calendar call s:calendar_color()
-augroup END
-
-function! s:calendar_color()
-    if exists(':Calendar')
-        call calendar#color#syntax('Saturday', s:GetColor('green'),
-                    \ s:GetColor('blackgravel'), '')
-        call calendar#color#syntax('TodaySaturday', s:GetColor('green'),
-                    \ s:GetColor('blackgravel'), '')
-        call calendar#color#syntax('Sunday', s:GetColor('darkpink'),
-                    \ s:GetColor('blackgravel'), '')
-        call calendar#color#syntax('TodaySunday', s:GetColor('darkpink'),
-                    \ s:GetColor('blackgravel'), '')
-    endif
-    hi! link CalendarSaturdayTitle CalendarDayTitle
-    hi! link CalendarSundayTitle CalendarDayTitle
-endfunction
-
-" }}}
-" Denite {{{
-
-hi default link deniteSource_grepFile Directory
-
-" }}}
 " Gitgutter {{{
 
 call s:HL('GitGutterAdd',                'green', 'blackgravel')
@@ -348,13 +320,6 @@ call s:HL('InterestingWord6', 'coal', 'snow')
 
 call s:HL('Sneak','coal', 'lightyellow', 'bold')
 call s:HL('SneakLabel','darkorange', 'coal')
-
-" }}}
-" Unite {{{
-
-call s:HL('UniteQuickFixWarning', 'darkorange', '', 'none')
-hi default link uniteSource__GrepFile Directory
-hi default link uniteSource__NeoBundleInstall_URI Identifier
 
 " }}}
 " Vimfiler {{{
