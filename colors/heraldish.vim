@@ -2,7 +2,7 @@
 "          File: heraldish.vim
 "        Author: Pedro Ferrari
 "       Created: 13 Aug 2013
-" Last Modified: 05 Mar 2017
+" Last Modified: 06 Mar 2017
 "   Description: Heraldish colorscheme
 "===============================================================================
 " The way to structure the colorscheme is based (copied) on Steve Losh's Bad
@@ -245,6 +245,31 @@ if has('spell')
         hi SpellLocal  ctermfg=240   ctermbg=233  cterm=underline
         hi SpellRare   ctermfg=240   ctermbg=233  cterm=underline
     endif
+endif
+
+" }}}
+" Neovim terminal colors {{{
+
+" Note: this follows iTerms' afterglow colorscheme
+if has('nvim')
+    let g:terminal_color_0 =  '#1b1b1b' " black
+    let g:terminal_color_1 =  '#bc5653' " red
+    let g:terminal_color_2 =  '#909d63' " green
+    let g:terminal_color_3 =  '#ebc17a' " yellow
+    let g:terminal_color_4 =  '#7eaac7' " blue
+    let g:terminal_color_5 =  '#b06698' " magenta
+    let g:terminal_color_6 =  '#8ddcd8' " cyan
+    let g:terminal_color_7 =  '#d9d9d9' " greyish white
+    let g:terminal_color_8 =  '#636363' " bright grey
+    let g:terminal_color_9 =  '#bc5653' " bright red
+    let g:terminal_color_10 = '#909d63' " bright green
+    let g:terminal_color_11 = '#ebc17a' " bright yellow
+    let g:terminal_color_12 = '#7eaac7' " bright blue
+    let g:terminal_color_13 = '#b06698' " bright magenta
+    let g:terminal_color_14 = '#8ddcd8' " bright cyan
+    let g:terminal_color_14 = '#f7f7f7' " white
+    let g:terminal_color_background = g:terminal_color_0
+    let g:terminal_color_foreground = g:terminal_color_7
 endif
 
 " }}}
