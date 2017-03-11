@@ -690,7 +690,7 @@ call <sid>X('txtURL', s:blue, '', '')
 " Vim {{{
 
 call <sid>X('vimCommand',      s:purple,       '', '')
-call <sid>X('vimCommentTitle', s:comment_grey, '', 'bold')
+call <sid>X('vimCommentTitle', s:purple,       '', '')
 call <sid>X('vimFunction',     s:light_blue,   '', '')
 call <sid>X('vimFuncName',     s:purple,       '', '')
 call <sid>X('vimHighlight',    s:cyan,         '', '')
