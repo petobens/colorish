@@ -681,6 +681,11 @@ call <sid>X('rustCommentBlockDoc',      s:comment_grey, '', '')
 call <sid>X('rustCommentBlockDocError', s:comment_grey, '', '')
 
 " }}}
+" Text {{{
+
+call <sid>X('txtURL', s:blue, '', '')
+
+" }}}
 " Vim {{{
 
 call <sid>X('vimCommand',      s:purple,       '', '')
