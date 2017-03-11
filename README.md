@@ -17,12 +17,17 @@ The color schemes additionally include
 [vim-airline](https://github.com/vim-airline/vim-airline) themes to customize
 your status line.
 
+## Screenshots
+
 The first screenshot below shows a vim file and the second one a python file
 using `heraldish` on Windows (with GUI Vim). The third and fourth screenshots
-use `onedarkish` on Mac.
+use `onedarkish` on Mac (with iTerm and Tmux).
 
 ![heraldish_screenshot_1](https://cloud.githubusercontent.com/assets/2583971/4240990/12e1830a-39f0-11e4-9d50-11103676fd08.png)
 ![heraldish_screenshot_2](https://cloud.githubusercontent.com/assets/2583971/4240991/132282e2-39f0-11e4-9808-fdfbb5d8dce7.png)
+
+![onedarkish_screenshot_1](https://cloud.githubusercontent.com/assets/2583971/23824069/9fe7ef6e-064e-11e7-932d-ed0925fdd0b2.png)
+![onedarkish_screenshot_2](https://cloud.githubusercontent.com/assets/2583971/23824073/a4ff9aa6-064e-11e7-9d98-e3d9ae3d33d1.png)
 
 ## Installation
 
