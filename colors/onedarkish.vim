@@ -22,12 +22,12 @@ endif
 set background=dark
 
 if exists('g:colors_name')
-  unlet g:colors_name
+    unlet g:colors_name
 endif
 let g:colors_name = 'onedarkish'
 
 if !exists('g:one_allow_italics')
-  let g:one_allow_italics = 0
+    let g:one_allow_italics = 0
 endif
 
 " }}}
