@@ -32,228 +32,229 @@ endif
 
 " }}}
 " Highlighting functions {{{
-fun <SID>grey_number(x)
-if &t_Co == 88
-    if a:x < 23
-    return 0
-    elseif a:x < 69
-    return 1
-    elseif a:x < 103
-    return 2
-    elseif a:x < 127
-    return 3
-    elseif a:x < 150
-    return 4
-    elseif a:x < 173
-    return 5
-    elseif a:x < 196
-    return 6
-    elseif a:x < 219
-    return 7
-    elseif a:x < 243
-    return 8
-    else
-    return 9
-    endif
-else
-    if a:x < 14
-    return 0
-    else
-    let l:n = (a:x - 8) / 10
-    let l:m = (a:x - 8) % 10
-    if l:m < 5
-        return l:n
-    else
-        return l:n + 1
-    endif
-    endif
-endif
-endfun
 
-" returns the actual grey level represented by the grey index
+function <SID>grey_number(x)
+    if &t_Co == 88
+        if a:x < 23
+            return 0
+        elseif a:x < 69
+            return 1
+        elseif a:x < 103
+            return 2
+        elseif a:x < 127
+            return 3
+        elseif a:x < 150
+            return 4
+        elseif a:x < 173
+            return 5
+        elseif a:x < 196
+            return 6
+        elseif a:x < 219
+            return 7
+        elseif a:x < 243
+            return 8
+        else
+            return 9
+        endif
+    else
+        if a:x < 14
+            return 0
+        else
+            let l:n = (a:x - 8) / 10
+            let l:m = (a:x - 8) % 10
+            if l:m < 5
+                return l:n
+            else
+                return l:n + 1
+            endif
+        endif
+    endif
+endfunction
+
+" Returns the actual grey level represented by the grey index
 fun <SID>grey_level(n)
-if &t_Co == 88
-    if a:n == 0
-    return 0
-    elseif a:n == 1
-    return 46
-    elseif a:n == 2
-    return 92
-    elseif a:n == 3
-    return 115
-    elseif a:n == 4
-    return 139
-    elseif a:n == 5
-    return 162
-    elseif a:n == 6
-    return 185
-    elseif a:n == 7
-    return 208
-    elseif a:n == 8
-    return 231
+    if &t_Co == 88
+        if a:n == 0
+            return 0
+        elseif a:n == 1
+            return 46
+        elseif a:n == 2
+            return 92
+        elseif a:n == 3
+            return 115
+        elseif a:n == 4
+            return 139
+        elseif a:n == 5
+            return 162
+        elseif a:n == 6
+            return 185
+        elseif a:n == 7
+            return 208
+        elseif a:n == 8
+            return 231
+        else
+            return 255
+        endif
     else
-    return 255
+        if a:n == 0
+            return 0
+        else
+            return 8 + (a:n * 10)
+        endif
     endif
-else
-    if a:n == 0
-    return 0
+endfunction
+
+" Returns the palette index for the given grey index
+function <SID>grey_color(n)
+    if &t_Co == 88
+        if a:n == 0
+            return 16
+        elseif a:n == 9
+            return 79
+        else
+            return 79 + a:n
+        endif
     else
-    return 8 + (a:n * 10)
+        if a:n == 0
+            return 16
+        elseif a:n == 25
+            return 231
+        else
+            return 231 + a:n
+        endif
     endif
-endif
-endfun
+endfunction
 
-" returns the palette index for the given grey index
-fun <SID>grey_color(n)
-if &t_Co == 88
-    if a:n == 0
-    return 16
-    elseif a:n == 9
-    return 79
+" Returns an approximate color index for the given color level
+function <SID>rgb_number(x)
+    if &t_Co == 88
+        if a:x < 69
+            return 0
+        elseif a:x < 172
+            return 1
+        elseif a:x < 230
+            return 2
+        else
+            return 3
+        endif
     else
-    return 79 + a:n
+        if a:x < 75
+            return 0
+        else
+            let l:n = (a:x - 55) / 40
+            let l:m = (a:x - 55) % 40
+            if l:m < 20
+                return l:n
+            else
+                return l:n + 1
+            endif
+        endif
     endif
-else
-    if a:n == 0
-    return 16
-    elseif a:n == 25
-    return 231
+endfunction
+
+" Returns the actual color level for the given color index
+function <SID>rgb_level(n)
+    if &t_Co == 88
+        if a:n == 0
+            return 0
+        elseif a:n == 1
+            return 139
+        elseif a:n == 2
+            return 205
+        else
+            return 255
+        endif
     else
-    return 231 + a:n
+        if a:n == 0
+            return 0
+        else
+            return 55 + (a:n * 40)
+        endif
     endif
-endif
-endfun
+endfunction
 
-" returns an approximate color index for the given color level
-fun <SID>rgb_number(x)
-if &t_Co == 88
-    if a:x < 69
-    return 0
-    elseif a:x < 172
-    return 1
-    elseif a:x < 230
-    return 2
+" Returns the palette index for the given R/G/B color indices
+function <SID>rgb_color(x, y, z)
+    if &t_Co == 88
+        return 16 + (a:x * 16) + (a:y * 4) + a:z
     else
-    return 3
+        return 16 + (a:x * 36) + (a:y * 6) + a:z
     endif
-else
-    if a:x < 75
-    return 0
+endfunction
+
+" Returns the palette index to approximate the given R/G/B color levels
+function <SID>color(r, g, b)
+    " Get the closest grey
+    let l:gx = <SID>grey_number(a:r)
+    let l:gy = <SID>grey_number(a:g)
+    let l:gz = <SID>grey_number(a:b)
+
+    " Get the closest color
+    let l:x = <SID>rgb_number(a:r)
+    let l:y = <SID>rgb_number(a:g)
+    let l:z = <SID>rgb_number(a:b)
+
+    if l:gx == l:gy && l:gy == l:gz
+        " There are two possibilities
+        let l:dgr = <SID>grey_level(l:gx) - a:r
+        let l:dgg = <SID>grey_level(l:gy) - a:g
+        let l:dgb = <SID>grey_level(l:gz) - a:b
+        let l:dgrey = (l:dgr * l:dgr) + (l:dgg * l:dgg) + (l:dgb * l:dgb)
+        let l:dr = <SID>rgb_level(l:gx) - a:r
+        let l:dg = <SID>rgb_level(l:gy) - a:g
+        let l:db = <SID>rgb_level(l:gz) - a:b
+        let l:drgb = (l:dr * l:dr) + (l:dg * l:dg) + (l:db * l:db)
+        if l:dgrey < l:drgb
+        " Use the grey
+            return <SID>grey_color(l:gx)
+        else
+        " Use the color
+            return <SID>rgb_color(l:x, l:y, l:z)
+        endif
     else
-    let l:n = (a:x - 55) / 40
-    let l:m = (a:x - 55) % 40
-    if l:m < 20
-        return l:n
-    else
-        return l:n + 1
+        " Only one possibility
+        return <SID>rgb_color(l:x, l:y, l:z)
     endif
+endfunction
+
+" Returns the palette index to approximate the 'rrggbb' hex string
+function <SID>rgb(rgb)
+    let l:r = ('0x' . strpart(a:rgb, 0, 2)) + 0
+    let l:g = ('0x' . strpart(a:rgb, 2, 2)) + 0
+    let l:b = ('0x' . strpart(a:rgb, 4, 2)) + 0
+
+    return <SID>color(l:r, l:g, l:b)
+endfunction
+
+" Sets the highlighting for the given group
+function <sid>X(group, fg, bg, attr)
+    let l:attr = a:attr
+    if g:one_allow_italics == 0 && l:attr ==? 'italic'
+        let l:attr= 'none'
     endif
-endif
-endfun
 
-" returns the actual color level for the given color index
-fun <SID>rgb_level(n)
-if &t_Co == 88
-    if a:n == 0
-    return 0
-    elseif a:n == 1
-    return 139
-    elseif a:n == 2
-    return 205
-    else
-    return 255
+    let l:bg = ''
+    let l:fg = ''
+    let l:decoration = ''
+
+    if a:bg !=# ''
+        let l:bg = ' guibg=#' . a:bg . ' ctermbg=' . <SID>rgb(a:bg)
     endif
-else
-    if a:n == 0
-    return 0
-    else
-    return 55 + (a:n * 40)
+
+    if a:fg !=# ''
+        let l:fg = ' guifg=#' . a:fg . ' ctermfg=' . <SID>rgb(a:fg)
     endif
-endif
-endfun
 
-" returns the palette index for the given R/G/B color indices
-fun <SID>rgb_color(x, y, z)
-if &t_Co == 88
-    return 16 + (a:x * 16) + (a:y * 4) + a:z
-else
-    return 16 + (a:x * 36) + (a:y * 6) + a:z
-endif
-endfun
-
-" returns the palette index to approximate the given R/G/B color levels
-fun <SID>color(r, g, b)
-" get the closest grey
-let l:gx = <SID>grey_number(a:r)
-let l:gy = <SID>grey_number(a:g)
-let l:gz = <SID>grey_number(a:b)
-
-" get the closest color
-let l:x = <SID>rgb_number(a:r)
-let l:y = <SID>rgb_number(a:g)
-let l:z = <SID>rgb_number(a:b)
-
-if l:gx == l:gy && l:gy == l:gz
-    " there are two possibilities
-    let l:dgr = <SID>grey_level(l:gx) - a:r
-    let l:dgg = <SID>grey_level(l:gy) - a:g
-    let l:dgb = <SID>grey_level(l:gz) - a:b
-    let l:dgrey = (l:dgr * l:dgr) + (l:dgg * l:dgg) + (l:dgb * l:dgb)
-    let l:dr = <SID>rgb_level(l:gx) - a:r
-    let l:dg = <SID>rgb_level(l:gy) - a:g
-    let l:db = <SID>rgb_level(l:gz) - a:b
-    let l:drgb = (l:dr * l:dr) + (l:dg * l:dg) + (l:db * l:db)
-    if l:dgrey < l:drgb
-    " use the grey
-    return <SID>grey_color(l:gx)
-    else
-    " use the color
-    return <SID>rgb_color(l:x, l:y, l:z)
+    if a:attr !=# ''
+        let l:decoration = ' gui=' . l:attr . ' cterm=' . l:attr
     endif
-else
-    " only one possibility
-    return <SID>rgb_color(l:x, l:y, l:z)
-endif
-endfun
 
-" returns the palette index to approximate the 'rrggbb' hex string
-fun <SID>rgb(rgb)
-let l:r = ('0x' . strpart(a:rgb, 0, 2)) + 0
-let l:g = ('0x' . strpart(a:rgb, 2, 2)) + 0
-let l:b = ('0x' . strpart(a:rgb, 4, 2)) + 0
+    let l:exec = l:fg . l:bg . l:decoration
 
-return <SID>color(l:r, l:g, l:b)
-endfun
-
-" sets the highlighting for the given group
-fun <sid>X(group, fg, bg, attr)
-let l:attr = a:attr
-if g:one_allow_italics == 0 && l:attr ==? 'italic'
-    let l:attr= 'none'
-endif
-
-let l:bg = ''
-let l:fg = ''
-let l:decoration = ''
-
-if a:bg !=# ''
-    let l:bg = ' guibg=#' . a:bg . ' ctermbg=' . <SID>rgb(a:bg)
-endif
-
-if a:fg !=# ''
-    let l:fg = ' guifg=#' . a:fg . ' ctermfg=' . <SID>rgb(a:fg)
-endif
-
-if a:attr !=# ''
-    let l:decoration = ' gui=' . l:attr . ' cterm=' . l:attr
-endif
-
-let l:exec = l:fg . l:bg . l:decoration
-
-if l:exec !=# ''
-    exec 'hi ' . a:group . l:exec
-endif
-endfun
+    if l:exec !=# ''
+        exec 'hi ' . a:group . l:exec
+    endif
+endfunction
 
 "}}}
 " Palette {{{
@@ -725,6 +726,15 @@ call <sid>X('zshVariableDef', s:dark_yellow,  '', '')
 " }}}
 " Plugins {{{
 
+" Fugitive
+call <sid>X('diffAdded',              s:green,        '', '')
+call <sid>X('diffRemoved',            s:red,          '', '')
+
+" Git gutter
+call <sid>X('GitGutterAdd',         s:green,        '', '')
+call <sid>X('GitGutterChange',      s:yellow,       '', '')
+call <sid>X('GitGutterDelete',      s:red,          '', '')
+
 " Interesting words (from Steve Losh's vimrc)
 call <sid>X('InterestingWord1', s:black, s:yellow,      '')
 call <sid>X('InterestingWord2', s:black, s:green,       '')
@@ -733,31 +743,20 @@ call <sid>X('InterestingWord4', s:black, s:dark_yellow, '')
 call <sid>X('InterestingWord5', s:black, s:light_blue,  '')
 call <sid>X('InterestingWord6', s:black, s:white,       '')
 
-" Git gutter
-call <sid>X('SignifySignAdd',         s:green,        '', '')
-call <sid>X('SignifySignChange',      s:yellow,       '', '')
-call <sid>X('SignifySignDelete',      s:red,          '', '')
-hi link GitGutterAdd    SignifySignAdd
-hi link GitGutterChange SignifySignChange
-hi link GitGutterDelete SignifySignDelete
-
-" Fugitive
-call <sid>X('diffAdded',              s:green,        '', '')
-call <sid>X('diffRemoved',            s:red,          '', '')
-
 " VimFiler
 call <sid>X('vimfilerMarkedFile', s:purple, '', '')
 
 " }}}
 
 " Delete functions {{{
-delf <SID>X
-delf <SID>rgb
-delf <SID>color
-delf <SID>rgb_color
-delf <SID>rgb_level
-delf <SID>rgb_number
-delf <SID>grey_color
-delf <SID>grey_level
-delf <SID>grey_number
+delfunction <SID>X
+delfunction <SID>rgb
+delfunction <SID>color
+delfunction <SID>rgb_color
+delfunction <SID>rgb_level
+delfunction <SID>rgb_number
+delfunction <SID>grey_color
+delfunction <SID>grey_level
+delfunction <SID>grey_number
+
 "}}}
