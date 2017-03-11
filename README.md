@@ -8,7 +8,7 @@ Two color schemes for Vim (and Neovim) are included:
 
 * Onedarkish is my fork of [vim-one](https://github.com/rakr/vim-one), the
   excellent Atom syntax theme port for Vim and Neovim.  Many of the changes
-  come from [onedark.vim](https://github.com/joshdick/onedark.vim)
+  come from [onedark.vim](https://github.com/joshdick/onedark.vim).
 
 Colors are optimized for GUI Vim and terminals that offer *true color* but
 256-color terminals are also supported.
