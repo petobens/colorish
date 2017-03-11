@@ -685,13 +685,13 @@ call <sid>X('rustCommentBlockDocError', s:comment_grey, '', '')
 
 call <sid>X('vimCommand',      s:purple,       '', '')
 call <sid>X('vimCommentTitle', s:comment_grey, '', 'bold')
-call <sid>X('vimFunction',     s:cyan,         '', '')
+call <sid>X('vimFunction',     s:light_blue,   '', '')
 call <sid>X('vimFuncName',     s:purple,       '', '')
-call <sid>X('vimHighlight',    s:light_blue,   '', '')
+call <sid>X('vimHighlight',    s:cyan,         '', '')
 call <sid>X('vimLineComment',  s:comment_grey, '', 'italic')
 call <sid>X('vimParenSep',     s:mono_2,       '', '')
 call <sid>X('vimSep',          s:mono_2,       '', '')
-call <sid>X('vimUserFunc',     s:cyan,         '', '')
+call <sid>X('vimUserFunc',     s:light_blue,   '', '')
 call <sid>X('vimVar',          s:red,          '', '')
 
 " }}}
