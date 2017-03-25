@@ -3,7 +3,7 @@
 "        Author: Ramzi Akremi
 "    Maintainer: Pedro Ferrari
 "       Created: 7 Mar 2017
-" Last Modified: 12 Mar 2017
+" Last Modified: 24 Mar 2017
 "   Description: Onedark Atom theme port for Vim/Neovim
 "===============================================================================
 
@@ -300,7 +300,7 @@ let s:syntax_fold_bg = s:comment_grey
 call <sid>X('Normal',           s:syntax_fg,    s:black,       '')
 call <sid>X('bold',             '',             '',            'bold')
 call <sid>X('ColorColumn',      '',             s:cursor_grey, '')
-call <sid>X('Conceal',          '',             '',            '')
+call <sid>X('Conceal',          s:mono_4,       s:black,       '')
 call <sid>X('Cursor',           '',             s:blue,        '')
 call <sid>X('CursorIM',         '',             '',            '')
 call <sid>X('CursorColumn',     '',             s:cursor_grey, '')
