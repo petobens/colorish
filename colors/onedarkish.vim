@@ -3,7 +3,7 @@
 "        Author: Ramzi Akremi
 "    Maintainer: Pedro Ferrari
 "       Created: 7 Mar 2017
-" Last Modified: 24 Mar 2017
+" Last Modified: 11 Apr 2017
 "   Description: Onedark Atom theme port for Vim/Neovim
 "===============================================================================
 
@@ -432,10 +432,33 @@ call <sid>X('asciidocListingBlock',   s:mono_2,  '', '')
 
 " }}}
 " C/C++ {{{
-call <sid>X('cConstant',           s:dark_yellow,  '', '')
-call <sid>X('cType',               s:purple,  '', '')
 
-call <sid>X('cCppString',          s:green,  '', '')
+call <sid>X('cInclude',          s:purple,       '', '')
+call <sid>X('cType',             s:purple,       '', '')
+call <sid>X('cPreCondit',        s:purple,       '', '')
+call <sid>X('cPreConditMatch',   s:purple,       '', '')
+call <sid>X('cCppString',        s:green,        '', '')
+call <sid>X('cType',             s:purple,       '', '')
+call <sid>X('cStorageClass',     s:purple,       '', '')
+call <sid>X('cStructure',        s:purple,       '', '')
+call <sid>X('cOperator',         s:purple,       '', '')
+call <sid>X('cStatement',        s:purple,       '', '')
+call <sid>X('cCommentL',         s:comment_grey, '', '')
+call <sid>X('cComment',          s:comment_grey, '', '')
+call <sid>X('cTODO',             s:purple,       '', '')
+call <sid>X('cConstant',         s:dark_yellow,  '', '')
+call <sid>X('cSpecial',          s:cyan,         '', '')
+call <sid>X('cSpecialCharacter', s:cyan,         '', '')
+call <sid>X('cString',           s:green,        '', '')
+call <sid>X('cppType',           s:purple,       '', '')
+call <sid>X('cppStorageClass',   s:purple,       '', '')
+call <sid>X('cppStructure',      s:purple,       '', '')
+call <sid>X('cppModifier',       s:purple,       '', '')
+call <sid>X('cppOperator',       s:purple,       '', '')
+call <sid>X('cppAccess',         s:purple,       '', '')
+call <sid>X('cppStatement',      s:purple,       '', '')
+call <sid>X('cppConstant',       s:red,          '', '')
+call <sid>X('cCppString',        s:green,        '', '')
 
 " }}}
 " CSS {{{
