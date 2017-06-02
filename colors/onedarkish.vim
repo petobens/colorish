@@ -3,7 +3,7 @@
 "        Author: Ramzi Akremi
 "    Maintainer: Pedro Ferrari
 "       Created: 7 Mar 2017
-" Last Modified: 14 Apr 2017
+" Last Modified: 02 Jun 2017
 "   Description: Onedark Atom theme port for Vim/Neovim
 "===============================================================================
 
@@ -329,6 +329,9 @@ call <sid>HL('PMenuThumb',       '',             s:white,       '')
 call <sid>HL('Question',         s:light_blue,   '',            '')
 call <sid>HL('Search',           s:black,        s:yellow,      '')
 call <sid>HL('SpecialKey',       s:special_grey, '',            'none')
+if has('nvim')
+    call <sid>HL('Whitespace',   s:special_grey, '',            'none')
+endif
 call <sid>HL('StatusLine',       s:syntax_fg,    s:cursor_grey, 'none')
 call <sid>HL('StatusLineNC',     s:comment_grey, '',            '')
 call <sid>HL('TabLine',          s:white,        s:black,       '')
@@ -563,6 +566,7 @@ call <sid>HL('jsFuncBraces',           s:mono_2,       '', '')
 call <sid>HL('jsFuncCall',             s:light_blue,   '', '')
 call <sid>HL('jsFuncParens',           s:mono_2,       '', '')
 call <sid>HL('jsFunction',             s:purple,       '', '')
+call <sid>HL('jsGenerator',            s:yellow,       '', '')
 call <sid>HL('jsGlobalObjects',        s:yellow,       '', '')
 call <sid>HL('jsModuleWords',          s:purple,       '', '')
 call <sid>HL('jsModules',              s:purple,       '', '')
