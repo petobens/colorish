@@ -3,7 +3,7 @@
 "        Author: Ramzi Akremi
 "    Maintainer: Pedro Ferrari
 "       Created: 7 Mar 2017
-" Last Modified: 02 Jun 2017
+" Last Modified: 12 Dec 2017
 "   Description: Onedark Atom theme port for Vim/Neovim
 "===============================================================================
 
@@ -604,16 +604,18 @@ call <sid>HL('javascriptVariable',     s:purple,       '', '')
 " }}}
 " JSON {{{
 
-call <sid>HL('jsonCommentError',       s:white,      '', ''        )
-call <sid>HL('jsonKeyword',            s:red,        '', ''        )
-call <sid>HL('jsonQuote',              s:light_blue, '', ''        )
-call <sid>HL('jsonTrailingCommaError', s:red,        '', 'reverse' )
-call <sid>HL('jsonMissingCommaError',  s:red,        '', 'reverse' )
-call <sid>HL('jsonNoQuotesError',      s:red,        '', 'reverse' )
-call <sid>HL('jsonNumError',           s:red,        '', 'reverse' )
-call <sid>HL('jsonString',             s:green,      '', ''        )
-call <sid>HL('jsonStringSQError',      s:red,        '', 'reverse' )
-call <sid>HL('jsonSemicolonError',     s:red,        '', 'reverse' )
+call <sid>HL('jsonCommentError',       s:white,       '', ''        )
+call <sid>HL('jsonKeyword',            s:red,         '', ''        )
+call <sid>HL('jsonQuote',              s:light_blue,  '', ''        )
+call <sid>HL('jsonTrailingCommaError', s:red,         '', 'reverse' )
+call <sid>HL('jsonMissingCommaError',  s:red,         '', 'reverse' )
+call <sid>HL('jsonNoQuotesError',      s:red,         '', 'reverse' )
+call <sid>HL('jsonNumError',           s:red,         '', 'reverse' )
+call <sid>HL('jsonString',             s:green,       '', ''        )
+call <sid>HL('jsonBoolean',            s:purple,      '', ''        )
+call <sid>HL('jsonNumber',             s:dark_yellow, '', ''        )
+call <sid>HL('jsonStringSQError',      s:red,         '', 'reverse' )
+call <sid>HL('jsonSemicolonError',     s:red,         '', 'reverse' )
 
 " }}}
 " Man {{{
