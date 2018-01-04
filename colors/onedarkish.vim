@@ -3,7 +3,7 @@
 "        Author: Ramzi Akremi
 "    Maintainer: Pedro Ferrari
 "       Created: 7 Mar 2017
-" Last Modified: 15 Dec 2017
+" Last Modified: 04 Jan 2018
 "   Description: Onedark Atom theme port for Vim/Neovim
 "===============================================================================
 
@@ -791,6 +791,9 @@ call <sid>HL('TagbarVisibilityPrivate', s:dark_red, '', '')
 call <sid>HL('TagbarVisibilityProtected', s:dark_red, '', '')
 call <sid>HL('TagbarVisibilityPublic', s:green, '', '')
 call <sid>HL('TagbarFoldIcon', s:cyan, '', '')
+
+" Pyflakes-vim
+call <sid>HL('PyFlakes', s:black, s:dark_red, '')
 
 " }}}
 
