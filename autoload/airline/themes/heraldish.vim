@@ -2,7 +2,7 @@
 "          File: heraldish.vim
 "        Author: Pedro Ferrari
 "       Created: 20 ago 2013
-" Last Modified: 22 Jan 2017
+" Last Modified: 05 Jan 2018
 "   Description: heraldish Airline Theme
 "===============================================================================
 let g:airline#themes#heraldish#palette = {}
@@ -47,7 +47,7 @@ let g:airline#themes#heraldish#palette.tabline = {
       \ 'airline_tab':           ['#bcbcbc', '#444444', 250, 238, ''],
       \ 'airline_tabsel':        ['#141413', '#0a9dff', 232,  39, 'bold'],
       \ 'airline_tabfill':       ['#f8f6f2', '#303030',  15, 236, ''],
-      \ 'airline_tabtype':       ['#303030', '#d0d0d0', 236, 252, 'bold'],
+      \ 'airline_tablabel':       ['#303030', '#d0d0d0', 236, 252, 'bold'],
       \ 'airline_tabmod':        ['#f8f6f2', '#d70000',  15, 160, 'bold'],
       \ 'airline_tabmod_unsel':  ['#141413', '#df5f00', 232, 166, 'bold'],
       \ 'airline_tabhid':        ['#585858', '#262626', 240, 235, '']
