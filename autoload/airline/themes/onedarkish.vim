@@ -34,6 +34,10 @@ let g:airline#themes#onedarkish#palette.visual = {
 let g:airline#themes#onedarkish#palette.replace = {
       \ 'airline_a': ['#24272e', '#c678dd', 235, 170, 'bold']
       \ }
+let g:airline#themes#onedarkish#palette.terminal = {
+      \ 'airline_a':    ['#24272e', '#56b6c2', 235, 170, 'bold'],
+      \ 'airline_term': ['#abb2bf', '#282c34',  15, 236, ''],
+      \ }
 
 let s:IA   = ['#5c6370', '#282c34', 59, 236, '']
 let g:airline#themes#onedarkish#palette.inactive =
