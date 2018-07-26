@@ -2,7 +2,7 @@
 "          File: onedarkish.vim
 "        Author: Pedro Ferrari
 "       Created: 08 Mar 2017
-" Last Modified: 20 Jun 2018
+" Last Modified: 26 Jul 2018
 "   Description: Onedarkish airline theme
 "===============================================================================
 let g:airline#themes#onedarkish#palette = {}
@@ -19,6 +19,7 @@ let g:airline#themes#onedarkish#palette.normal = {
       \ 'airline_warning': ['#24272e', '#d19a66', 235, 173, ''],
       \ 'airline_term':    ['#abb2bf', '#282c34',  15, 236, ''],
       \ }
+
 let g:airline#themes#onedarkish#palette.normal_paste = {
       \ 'airline_a': ['#24272e', '#e06c75', 235, 204, 'bold']
       \ }
@@ -34,6 +35,11 @@ let g:airline#themes#onedarkish#palette.visual = {
 let g:airline#themes#onedarkish#palette.replace = {
       \ 'airline_a': ['#24272e', '#c678dd', 235, 170, 'bold']
       \ }
+
+let g:airline#themes#onedarkish#palette.commandline = {
+      \ 'airline_a': ['#24272e', '#528bff', 235, 170, 'bold']
+      \ }
+
 let g:airline#themes#onedarkish#palette.terminal = {
       \ 'airline_a':    ['#24272e', '#56b6c2', 235, 170, 'bold'],
       \ 'airline_term': ['#abb2bf', '#282c34',  15, 236, ''],
