@@ -3,7 +3,7 @@
 "        Author: Ramzi Akremi
 "    Maintainer: Pedro Ferrari
 "       Created: 7 Mar 2017
-" Last Modified: 04 Jan 2018
+" Last Modified: 16 Aug 2018
 "   Description: Onedark Atom theme port for Vim/Neovim
 "===============================================================================
 
@@ -311,7 +311,7 @@ if has('nvim')
 endif
 call <sid>HL('Directory',        s:light_blue,   '',            '')
 call <sid>HL('ErrorMsg',         s:red,          s:black,       'none')
-call <sid>HL('VertSplit',        s:comment_grey, '',            'none')
+call <sid>HL('VertSplit',        s:cursor_grey,  '',            'none')
 call <sid>HL('Folded',           s:comment_grey, s:black,       'none')
 call <sid>HL('FoldColumn',       s:comment_grey, s:black,       '')
 call <sid>HL('IncSearch',        s:dark_yellow,  '',            '')
