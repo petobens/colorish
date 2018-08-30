@@ -3,7 +3,7 @@
 "        Author: Ramzi Akremi
 "    Maintainer: Pedro Ferrari
 "       Created: 7 Mar 2017
-" Last Modified: 16 Aug 2018
+" Last Modified: 30 Aug 2018
 "   Description: Onedark Atom theme port for Vim/Neovim
 "===============================================================================
 
@@ -388,10 +388,10 @@ call <sid>HL('Todo',           s:red,          s:black, '')
 " }}}
 " Spelling {{{
 
-call <sid>HL('SpellBad',   '', s:black, 'undercurl')
-call <sid>HL('SpellLocal', '', s:black, 'undercurl')
-call <sid>HL('SpellCap',   '', s:black, 'undercurl')
-call <sid>HL('SpellRare',  '', s:black, 'undercurl')
+call <sid>HL('SpellBad',   '', '', 'undercurl')
+call <sid>HL('SpellLocal', '', '', 'undercurl')
+call <sid>HL('SpellCap',   '', '', 'undercurl')
+call <sid>HL('SpellRare',  '', '', 'undercurl')
 
 " }}}
 " Vim Help {{{
