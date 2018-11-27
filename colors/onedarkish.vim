@@ -641,13 +641,18 @@ call <sid>HL('markdownH4',               s:red,         '', '')
 call <sid>HL('markdownH5',               s:red,         '', '')
 call <sid>HL('markdownH6',               s:red,         '', '')
 call <sid>HL('markdownListMarker',       s:red,         '', '')
+" For mkd syntax (that mainly follows html)
 call <sid>HL('htmlH1',                   s:dark_red,    '', 'bold')
 call <sid>HL('htmlH2',                   s:dark_red,    '', 'bold')
 call <sid>HL('htmlH3',                   s:dark_red,    '', 'bold')
 call <sid>HL('htmlH3',                   s:dark_red,    '', 'bold')
 call <sid>HL('htmlH4',                   s:dark_red,    '', 'bold')
 call <sid>HL('htmlH5',                   s:dark_red,    '', 'bold')
+call <sid>HL('htmlBold',                 s:dark_yellow, '', 'bold')
+call <sid>HL('htmlItalic',               s:purple,      '', 'italic')
 call <sid>HL('mkdHeading',               s:dark_red,    '', 'bold')
+call <sid>HL('mkdURL',                   s:purple,      '', '')
+call <sid>HL('mkdLink',                  s:blue,        '', 'none')
 
 " }}}
 " PHP {{{
