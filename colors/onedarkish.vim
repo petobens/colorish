@@ -799,9 +799,6 @@ call <sid>HL('TagbarVisibilityProtected', s:dark_red, '', '')
 call <sid>HL('TagbarVisibilityPublic', s:green, '', '')
 call <sid>HL('TagbarFoldIcon', s:cyan, '', '')
 
-" Pyflakes-vim
-call <sid>HL('PyFlakes', s:black, s:dark_red, '')
-
 " }}}
 
 " Delete functions {{{
