@@ -3,7 +3,7 @@
 "        Author: Ramzi Akremi
 "    Maintainer: Pedro Ferrari
 "       Created: 7 Mar 2017
-" Last Modified: 30 Aug 2018
+" Last Modified: 27 Nov 2018
 "   Description: Onedark Atom theme port for Vim/Neovim
 "===============================================================================
 
@@ -641,6 +641,13 @@ call <sid>HL('markdownH4',               s:red,         '', '')
 call <sid>HL('markdownH5',               s:red,         '', '')
 call <sid>HL('markdownH6',               s:red,         '', '')
 call <sid>HL('markdownListMarker',       s:red,         '', '')
+call <sid>HL('htmlH1',                   s:dark_red,    '', 'bold')
+call <sid>HL('htmlH2',                   s:dark_red,    '', 'bold')
+call <sid>HL('htmlH3',                   s:dark_red,    '', 'bold')
+call <sid>HL('htmlH3',                   s:dark_red,    '', 'bold')
+call <sid>HL('htmlH4',                   s:dark_red,    '', 'bold')
+call <sid>HL('htmlH5',                   s:dark_red,    '', 'bold')
+call <sid>HL('mkdHeading',               s:dark_red,    '', 'bold')
 
 " }}}
 " PHP {{{
