@@ -3,7 +3,7 @@
 "        Author: Ramzi Akremi
 "    Maintainer: Pedro Ferrari
 "       Created: 7 Mar 2017
-" Last Modified: 27 Nov 2018
+" Last Modified: 12 Dec 2018
 "   Description: Onedark Atom theme port for Vim/Neovim
 "===============================================================================
 
@@ -333,7 +333,7 @@ if has('nvim')
     call <sid>HL('Whitespace',   s:special_grey, '',            'none')
 endif
 call <sid>HL('StatusLine',       s:syntax_fg,    s:cursor_grey, 'none')
-call <sid>HL('StatusLineNC',     s:comment_grey, '',            '')
+call <sid>HL('StatusLineNC',     s:cursor_grey,  '',             '')
 call <sid>HL('TabLine',          s:white,        s:black,       '')
 call <sid>HL('TabLineFill',      s:comment_grey, s:visual_grey, 'none')
 call <sid>HL('TabLineSel',       s:black,        s:light_blue,  '')
