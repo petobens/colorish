@@ -2,7 +2,7 @@
 "          File: onedarkish.vim
 "        Author: Pedro Ferrari
 "       Created: 08 Mar 2017
-" Last Modified: 05 Feb 2019
+" Last Modified: 06 Feb 2019
 "   Description: Onedarkish airline theme
 "===============================================================================
 let g:airline#themes#onedarkish#palette = {}
@@ -26,21 +26,29 @@ let g:airline#themes#onedarkish#palette.normal_paste = {
       \ }
 
 let g:airline#themes#onedarkish#palette.insert = {
-      \ 'airline_a': ['#24272e', '#61afef', 235, 39, 'bold']
+      \ 'airline_a': ['#24272e', '#61afef', 235, 39, 'bold'],
+      \ 'airline_warning': ['#24272e', '#d19a66', 235, 173, ''],
+      \ 'airline_error':   ['#24272e', '#e06c75', 235, 173, ''],
       \ }
 
 let g:airline#themes#onedarkish#palette.visual = {
       \ 'airline_a': ['#24272e', '#d19a66', 235, 173, 'bold'],
       \ 'airline_term': ['#abb2bf', '#282c34',  15, 236, ''],
+      \ 'airline_warning': ['#24272e', '#d19a66', 235, 173, ''],
+      \ 'airline_error':   ['#24272e', '#e06c75', 235, 173, ''],
       \ }
 
 let g:airline#themes#onedarkish#palette.replace = {
-      \ 'airline_a': ['#24272e', '#c678dd', 235, 170, 'bold']
+      \ 'airline_a': ['#24272e', '#c678dd', 235, 170, 'bold'],
+      \ 'airline_warning': ['#24272e', '#d19a66', 235, 173, ''],
+      \ 'airline_error':   ['#24272e', '#e06c75', 235, 173, ''],
       \ }
 
 let g:airline#themes#onedarkish#palette.commandline = {
       \ 'airline_a': ['#24272e', '#528bff', 235, 170, 'bold'],
       \ 'airline_term': ['#abb2bf', '#282c34',  15, 236, ''],
+      \ 'airline_warning': ['#24272e', '#d19a66', 235, 173, ''],
+      \ 'airline_error':   ['#24272e', '#e06c75', 235, 173, ''],
       \ }
 
 let g:airline#themes#onedarkish#palette.terminal = {
