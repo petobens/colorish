@@ -3,7 +3,7 @@
 "        Author: Ramzi Akremi
 "    Maintainer: Pedro Ferrari
 "       Created: 7 Mar 2017
-" Last Modified: 12 Dec 2018
+" Last Modified: 04 Mar 2019
 "   Description: Onedark Atom theme port for Vim/Neovim
 "===============================================================================
 
@@ -789,6 +789,14 @@ call <sid>HL('InterestingWord6', s:black, s:white,       '')
 
 " VimFiler
 call <sid>HL('vimfilerMarkedFile', s:purple, '', '')
+
+" Denite
+call <sid>HL('deniteSource_grepFile', s:light_blue, '', '')
+
+" Defx
+call <sid>HL('Defx_filename_marker', s:light_blue, '', '')
+call <sid>HL('Defx_git_Modified', s:red, '', '')
+call <sid>HL('Defx_git_Staged', s:green, '', '')
 
 " Sneak
 call <sid>HL('Sneak', s:black, s:purple, '')
