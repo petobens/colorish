@@ -3,7 +3,7 @@
 "        Author: Ramzi Akremi
 "    Maintainer: Pedro Ferrari
 "       Created: 7 Mar 2017
-" Last Modified: 05 Mar 2019
+" Last Modified: 06 Mar 2019
 "   Description: Onedark Atom theme port for Vim/Neovim
 "===============================================================================
 
@@ -794,6 +794,7 @@ call <sid>HL('deniteSource_grepFile', s:light_blue, '', '')
 call <sid>HL('Defx_filename_marker', s:light_blue, '', '')
 call <sid>HL('Defx_git_Modified', s:red, '', '')
 call <sid>HL('Defx_git_Staged', s:green, '', '')
+call <sid>HL('Defx_mark_readonly', s:dark_red, '', '')
 
 " Sneak
 call <sid>HL('Sneak', s:black, s:purple, '')
@@ -807,7 +808,7 @@ call <sid>HL('TagbarType', s:light_blue, '', '')
 call <sid>HL('TagbarVisibilityPrivate', s:dark_red, '', '')
 call <sid>HL('TagbarVisibilityProtected', s:dark_red, '', '')
 call <sid>HL('TagbarVisibilityPublic', s:green, '', '')
-call <sid>HL('TagbarFoldIcon', s:cyan, '', '')
+call <sid>HL('TagbarFoldIcon', s:light_blue, '', '')
 
 " }}}
 
