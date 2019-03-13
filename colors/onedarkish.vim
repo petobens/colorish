@@ -3,7 +3,7 @@
 "        Author: Ramzi Akremi
 "    Maintainer: Pedro Ferrari
 "       Created: 7 Mar 2017
-" Last Modified: 06 Mar 2019
+" Last Modified: 13 Mar 2019
 "   Description: Onedark Atom theme port for Vim/Neovim
 "===============================================================================
 
@@ -770,6 +770,15 @@ call <sid>HL('zshVariableDef', s:dark_yellow,  '', '')
 " }}}
 " Plugins {{{
 
+" Denite
+call <sid>HL('deniteSource_grepFile', s:light_blue, '', '')
+
+" Defx
+call <sid>HL('Defx_filename_marker', s:light_blue, '', '')
+call <sid>HL('Defx_git_Modified', s:red, '', '')
+call <sid>HL('Defx_git_Staged', s:green, '', '')
+call <sid>HL('Defx_mark_readonly', s:dark_red, '', '')
+
 " Fugitive
 call <sid>HL('diffAdded',              s:green,        '', '')
 call <sid>HL('diffRemoved',            s:red,          '', '')
@@ -779,6 +788,9 @@ call <sid>HL('GitGutterAdd',         s:green,        '', '')
 call <sid>HL('GitGutterChange',      s:yellow,       '', '')
 call <sid>HL('GitGutterDelete',      s:red,          '', '')
 
+" HighlightedYank
+call <sid>HL('HighlightedyankRegion', s:green,        '', '')
+
 " Interesting words (from Steve Losh's vimrc)
 call <sid>HL('InterestingWord1', s:black, s:yellow,      '')
 call <sid>HL('InterestingWord2', s:black, s:green,       '')
@@ -786,15 +798,6 @@ call <sid>HL('InterestingWord3', s:black, s:purple,      '')
 call <sid>HL('InterestingWord4', s:black, s:dark_yellow, '')
 call <sid>HL('InterestingWord5', s:black, s:light_blue,  '')
 call <sid>HL('InterestingWord6', s:black, s:white,       '')
-
-" Denite
-call <sid>HL('deniteSource_grepFile', s:light_blue, '', '')
-
-" Defx
-call <sid>HL('Defx_filename_marker', s:light_blue, '', '')
-call <sid>HL('Defx_git_Modified', s:red, '', '')
-call <sid>HL('Defx_git_Staged', s:green, '', '')
-call <sid>HL('Defx_mark_readonly', s:dark_red, '', '')
 
 " Sneak
 call <sid>HL('Sneak', s:black, s:purple, '')
