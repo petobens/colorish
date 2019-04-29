@@ -3,7 +3,7 @@
 "        Author: Ramzi Akremi
 "    Maintainer: Pedro Ferrari
 "       Created: 7 Mar 2017
-" Last Modified: 18 Apr 2019
+" Last Modified: 29 Apr 2019
 "   Description: Onedark Atom theme port for Vim/Neovim
 "===============================================================================
 
@@ -297,7 +297,9 @@ let s:syntax_fold_bg = s:comment_grey
 " Actual colorscheme -----------------------------------------------------------
 " General/UI {{{
 
-call <sid>HL('Normal',           s:syntax_fg,    s:black,       '')
+" Don't set normal bg color: See: https://github.com/neovim/neovim/issues/9019
+" call <sid>HL('Normal',           s:syntax_fg,    s:black,       '')
+call <sid>HL('Normal',           s:syntax_fg,    '',            '')
 call <sid>HL('bold',             '',             '',            'bold')
 call <sid>HL('ColorColumn',      '',             s:cursor_grey, '')
 call <sid>HL('Conceal',          s:mono_4,       s:black,       '')
@@ -322,9 +324,9 @@ call <sid>HL('Italic',           '',             '',            'italic')
 call <sid>HL('ModeMsg',          s:dark_yellow,  '',            'none')
 call <sid>HL('MoreMsg',          s:dark_yellow,  '',            'none')
 call <sid>HL('NonText',          s:comment_grey, '',            'none')
-call <sid>HL('PMenu',            '',             s:pmenu,       '')
+call <sid>HL('PMenu',            s:syntax_fg,    s:pmenu,       '')
 call <sid>HL('PMenuSel',         s:black,        s:light_blue,  '')
-call <sid>HL('PMenuSbar',        '',             s:black,       '')
+call <sid>HL('PMenuSbar',        s:syntax_fg,    s:pmenu,       '')
 call <sid>HL('PMenuThumb',       '',             s:white,       '')
 call <sid>HL('Question',         s:light_blue,   '',            '')
 call <sid>HL('Search',           s:black,        s:yellow,      '')
