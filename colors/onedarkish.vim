@@ -310,6 +310,7 @@ call <sid>HL('CursorLine',       '',             s:cursor_grey, 'none')
 if has('nvim')
     call <sid>HL('QuickFixLine', '',             s:black,       '')
     call <sid>HL('TermCursor',   s:blue,         '',            '')
+    call <sid>HL('NormalFloat',  '',             s:cursor_grey, '')
 endif
 call <sid>HL('Directory',        s:light_blue,   '',            '')
 call <sid>HL('ErrorMsg',         s:red,          s:black,       'none')
