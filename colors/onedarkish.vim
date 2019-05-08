@@ -3,7 +3,7 @@
 "        Author: Ramzi Akremi
 "    Maintainer: Pedro Ferrari
 "       Created: 7 Mar 2017
-" Last Modified: 07 May 2019
+" Last Modified: 08 May 2019
 "   Description: Onedark Atom theme port for Vim/Neovim
 "===============================================================================
 
@@ -792,7 +792,9 @@ call <sid>HL('GitGutterChange',      s:yellow,       '', '')
 call <sid>HL('GitGutterDelete',      s:red,          '', '')
 
 " GitMessenger
-call <sid>HL('gitmessengerPopupNormal', '',   s:cursor_grey, '')
+call <sid>HL('gitmessengerHeader',      s:purple, '', '')
+call <sid>HL('gitmessengerHash',        s:yellow, '', '')
+call <sid>HL('gitmessengerPopupNormal', '', s:cursor_grey, '')
 
 " HighlightedYank
 call <sid>HL('HighlightedyankRegion', s:green,        '', '')
