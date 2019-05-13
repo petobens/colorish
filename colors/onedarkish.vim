@@ -3,7 +3,7 @@
 "        Author: Ramzi Akremi
 "    Maintainer: Pedro Ferrari
 "       Created: 7 Mar 2017
-" Last Modified: 08 May 2019
+" Last Modified: 13 May 2019
 "   Description: Onedark Atom theme port for Vim/Neovim
 "===============================================================================
 
@@ -806,6 +806,12 @@ call <sid>HL('InterestingWord3', s:black, s:purple,      '')
 call <sid>HL('InterestingWord4', s:black, s:dark_yellow, '')
 call <sid>HL('InterestingWord5', s:black, s:light_blue,  '')
 call <sid>HL('InterestingWord6', s:black, s:white,       '')
+
+" Neomake
+call <sid>HL('NeomakeVirtualtextError', s:red, s:cursor_grey, '')
+call <sid>HL('NeomakeVirtualtextWarning', s:dark_yellow, s:cursor_grey, '')
+call <sid>HL('NeomakeVirtualtextInfo', s:red, s:cursor_grey, '')
+call <sid>HL('NeomakeVirtualtextMessage', s:red, s:cursor_grey, '')
 
 " Sneak
 call <sid>HL('Sneak', s:black, s:purple, '')
