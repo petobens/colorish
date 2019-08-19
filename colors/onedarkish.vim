@@ -3,7 +3,7 @@
 "        Author: Ramzi Akremi
 "    Maintainer: Pedro Ferrari
 "       Created: 7 Mar 2017
-" Last Modified: 13 May 2019
+" Last Modified: 19 Aug 2019
 "   Description: Onedark Atom theme port for Vim/Neovim
 "===============================================================================
 
@@ -783,8 +783,12 @@ call <sid>HL('Defx_git_6_Staged', s:green, '', '')
 call <sid>HL('Defx_mark_0_readonly', s:dark_red, '', '')
 
 " Fugitive
-call <sid>HL('diffAdded',              s:green,        '', '')
-call <sid>HL('diffRemoved',            s:red,          '', '')
+call <sid>HL('diffAdded',                s:green, '', '')
+call <sid>HL('diffRemoved',              s:red,   '', '')
+call <sid>HL('fugitiveUnstagedHeading',  s:red,   '', '')
+call <sid>HL('fugitiveUnstagedModifier', s:red,   '', '')
+call <sid>HL('fugitiveStagedHeading',    s:green, '', '')
+call <sid>HL('fugitiveStagedModifier',   s:green, '', '')
 
 " Git gutter
 call <sid>HL('GitGutterAdd',         s:green,        '', '')
