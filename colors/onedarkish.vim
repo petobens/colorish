@@ -3,7 +3,7 @@
 "        Author: Ramzi Akremi
 "    Maintainer: Pedro Ferrari
 "       Created: 7 Mar 2017
-" Last Modified: 19 Aug 2019
+" Last Modified: 10 Nov 2019
 "   Description: Onedark Atom theme port for Vim/Neovim
 "===============================================================================
 
@@ -308,7 +308,7 @@ call <sid>HL('CursorIM',         '',             '',            '')
 call <sid>HL('CursorColumn',     '',             s:cursor_grey, '')
 call <sid>HL('CursorLine',       '',             s:cursor_grey, 'none')
 if has('nvim')
-    call <sid>HL('QuickFixLine', '',             s:black,       '')
+    highlight! link QuickFixLine Normal
     call <sid>HL('TermCursor',   s:blue,         '',            '')
     call <sid>HL('NormalFloat',  '',             s:cursor_grey, '')
 endif
