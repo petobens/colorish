@@ -227,7 +227,7 @@ function <SID>rgb(rgb)
 endfunction
 
 " Sets the highlighting for the given group
-function <sid>HL(group, fg, bg, attr)
+function <sid>HL(group, fg, bg, attr, ...)
     let l:attr = a:attr
     if g:one_allow_italics == 0 && l:attr ==? 'italic'
         let l:attr= 'none'
@@ -236,6 +236,7 @@ function <sid>HL(group, fg, bg, attr)
     let l:bg = ''
     let l:fg = ''
     let l:decoration = ''
+    let l:gui_under = ''
 
     if a:bg !=# ''
         let l:bg = ' guibg=#' . a:bg . ' ctermbg=' . <SID>rgb(a:bg)
@@ -249,7 +250,11 @@ function <sid>HL(group, fg, bg, attr)
         let l:decoration = ' gui=' . l:attr . ' cterm=' . l:attr
     endif
 
-    let l:exec = l:fg . l:bg . l:decoration
+    if a:0 && a:1 !=# ''
+        let l:gui_under = ' guisp=#' . a:1
+    endif
+
+    let l:exec = l:fg . l:bg . l:decoration . l:gui_under
 
     if l:exec !=# ''
         exec 'hi ' . a:group . l:exec
@@ -391,10 +396,10 @@ call <sid>HL('Todo',           s:red,          s:black, '')
 " }}}
 " Spelling {{{
 
-call <sid>HL('SpellBad',   '', '', 'undercurl')
-call <sid>HL('SpellLocal', '', '', 'undercurl')
-call <sid>HL('SpellCap',   '', '', 'undercurl')
-call <sid>HL('SpellRare',  '', '', 'undercurl')
+call <sid>HL('SpellBad',   '', '', 'undercurl', s:red)
+call <sid>HL('SpellLocal', '', '', 'undercurl', s:dark_yellow)
+call <sid>HL('SpellCap',   '', '', 'undercurl', s:dark_yellow)
+call <sid>HL('SpellRare',  '', '', 'undercurl', s:dark_yellow)
 
 " }}}
 " Vim Help {{{
