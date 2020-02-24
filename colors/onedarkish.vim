@@ -1,9 +1,8 @@
 "===============================================================================
 "          File: onedarkish.vim
-"        Author: Ramzi Akremi
+"        Author: Ramzi Akremi (vim-one)
 "    Maintainer: Pedro Ferrari
 "       Created: 7 Mar 2017
-" Last Modified: 10 Nov 2019
 "   Description: Onedark Atom theme port for Vim/Neovim
 "===============================================================================
 
@@ -534,11 +533,21 @@ hi link gitcommitUnmergedArrow  gitcommitUnmergedFile
 
 " }}}
 " Go {{{
+
+call <sid>HL('goBuiltins',     s:cyan,   '', '')
+call <sid>HL('goConst',        s:purple, '', '')
 call <sid>HL('goDeclaration',  s:purple, '', '')
+call <sid>HL('goDeclType',     s:cyan,   '', '')
 call <sid>HL('goField',        s:red,    '', '')
+call <sid>HL('goFunctionCall', s:blue,   '', '')
 call <sid>HL('goMethod',       s:cyan,   '', '')
-call <sid>HL('goType',         s:purple, '', '')
+call <sid>HL('goType',         s:yellow, '', '')
+call <sid>HL('goTypeDecl',     s:purple, '', '')
+call <sid>HL('goTypeName',     s:yellow, '', '')
 call <sid>HL('goUnsignedInts', s:cyan,   '', '')
+call <sid>HL('goVar',          s:purple, '', '')
+call <sid>HL('goVarAssign',    s:red,    '', '')
+call <sid>HL('goVarDefs',      s:red,    '', '')
 
 " }}}
 " HTML {{{
