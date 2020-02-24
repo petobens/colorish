@@ -314,7 +314,7 @@ call <sid>HL('CursorLine',       '',             s:cursor_grey, 'none')
 if has('nvim')
     highlight! link QuickFixLine Normal
     call <sid>HL('TermCursor',   s:blue,         '',            '')
-    call <sid>HL('NormalFloat',  '',             s:cursor_grey, '')
+    call <sid>HL('NormalFloat',  s:syntax_fg,    s:black,       '')
 endif
 call <sid>HL('Directory',        s:light_blue,   '',            '')
 call <sid>HL('ErrorMsg',         s:red,          s:black,       'none')
